@@ -5,8 +5,7 @@ import SingleBalloon from './SingleBalloon';
 export default class Balloons extends Component {
     state = {
         windowWidth: $(window).width(),
-        windowHeight: $(window).height(),
-        renderBalloon: true
+        windowHeight: $(window).height()
     }
 
     pickANumber(max, min) {
@@ -17,10 +16,6 @@ export default class Balloons extends Component {
         el.removeClass();
         var random = Math.floor(this.pickANumber(5, 1));
         el.addClass('bln-' + random + '-clone');
-    }
-
-    unMountBalloon(el) {
-        this.setState({ renderBalloon: false })
     }
 
     resetBalloon(el) {
@@ -55,9 +50,11 @@ export default class Balloons extends Component {
                 },
                 duration: maxbllnSpeed,
                 easing: 'linear',
-                complete: () => {
-                    this.unMountBalloon(el);
-                }
+
+                // //Optional: reset balloon and start animation over
+                // complete: () => {
+                //     this.resetBalloon(el);
+                // }
             });
 
     }
@@ -87,7 +84,7 @@ export default class Balloons extends Component {
     render() {
         return (
             <div className="blns">
-                <SingleBalloon renderBalloon={this.state.renderBalloon} />
+                <SingleBalloon />
             </div>
         )
     }
