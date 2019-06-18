@@ -1,6 +1,11 @@
 import React, { Component, Fragment } from 'react';
 
 export default class NotFound extends Component {
+  
+  componentDidMount() {
+    document.title = "Error 404 Not Found"
+  }
+
   render() {
     return (
       <Fragment>
