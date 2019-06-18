@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../assets/scss/main.scss';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './Home';
 import NotFound from './NotFound';
 
 export default class App extends Component {
@@ -11,6 +12,7 @@ export default class App extends Component {
 
         <main>
           <Switch>
+            <Route exact path="/" component={ Home } />
             <Route component={ NotFound } />
           </Switch>
         </main>
