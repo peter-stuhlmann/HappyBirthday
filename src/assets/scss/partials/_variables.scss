@@ -1,0 +1,20 @@
+// Colors
+$primaryColor: #fff;
+$secondaryColor: #000;
+
+// Fonts
+$primaryFont: 'Open Sans', sans-serif;
+$secondaryFont: 'Cookie', cursive;
+
+// Margins, Paddings, Shadows ...
+$padding: 15px;
+$margin: $padding;
+$borderRadius: 5px;
+
+$textShadow: 2px 2px 3px rgba(0,0,0,0.8);
+$boxShadow: 4px 4px 7px 0px rgba(0,0,0,0.8);
+
+// Media Queries
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1170px;

@@ -1,0 +1,25 @@
+body {
+    font-family: $primaryFont;
+
+    main {
+        width: 100%;
+        max-width: $desktop;
+        margin: calc(#{$margin} * 2) auto;
+        padding: 0 $padding;
+        box-sizing: border-box;
+
+        .receiver {
+            font-family: $secondaryFont;
+            font-size: 4em;
+            text-shadow: $textShadow;
+            text-align: center;
+            margin-top: calc(#{$margin} * 10)
+        }
+
+        .sender {
+            font-family: $secondaryFont;
+            font-size: 3em;
+            text-align: center
+        }
+    }
+}
