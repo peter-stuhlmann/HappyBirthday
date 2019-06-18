@@ -14,6 +14,7 @@
         "headers": { "cache-control": "s-maxage=31536000,immutable" },
         "dest": "/static/$1"
       },
+      { "src": "/favicon.jpg", "dest": "/favicon.jpg" },
       {
         "src": "/service-worker.js",
         "headers": { "cache-control": "s-maxage=0" },
