@@ -14,6 +14,7 @@
         "headers": { "cache-control": "s-maxage=31536000,immutable" },
         "dest": "/static/$1"
       },
+      { "src": "/robots.txt", "dest": "/robots.txt" },
       {
         "src": "/service-worker.js",
         "headers": { "cache-control": "s-maxage=0" },
