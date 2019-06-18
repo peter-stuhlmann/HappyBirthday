@@ -1,5 +1,6 @@
 body {
     font-family: $primaryFont;
+    margin: 0;
 
     main {
         width: 100%;
@@ -7,6 +8,10 @@ body {
         margin: calc(#{$margin} * 2) auto;
         padding: 0 $padding;
         box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
 
         .receiver {
             font-family: $secondaryFont;

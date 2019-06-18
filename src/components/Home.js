@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import Balloons from './Balloons';
 
 export default class Home extends Component {
 
@@ -17,8 +18,11 @@ export default class Home extends Component {
   render() {
     return (
       <Fragment>
-        <p className="receiver">Happy birthday, { this.receiver }!</p>
-        <p className="sender">{ this.sender }</p>
+        <Balloons />
+        <main>
+          <p className="receiver">Happy birthday, {this.receiver}!</p>
+          <p className="sender">{this.sender}</p>
+        </main>
       </Fragment>
     );
   }

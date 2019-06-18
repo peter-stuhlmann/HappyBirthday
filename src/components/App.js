@@ -13,14 +13,12 @@ export default class App extends Component {
     return ( 
       <Router>
 
-        <main>
-          <Switch>
-            <Route path="/" component={ Home } />
-            <Route exact path="/impressum" component={ LegalNotice } />
-            <Route exact path="/datenschutzerklaerung" component={ PrivacyPolicy } />
-            {/* <Route component={ NotFound } /> */}
-          </Switch>
-        </main>
+        <Switch>
+          <Route path="/" component={ Home } />
+          <Route exact path="/impressum" component={ LegalNotice } />
+          <Route exact path="/datenschutzerklaerung" component={ PrivacyPolicy } />
+          {/* <Route component={ NotFound } /> */}
+        </Switch>
 
         <Footer />
 
