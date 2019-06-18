@@ -7,6 +7,11 @@ export default class Home extends Component {
 
   componentDidMount() {
     document.title = `Happy birthday, ${ this.receiver }!`
+
+    this.meta = document.createElement('meta');
+    this.meta.name='description';
+    this.meta.setAttribute('content', 'Happy birthday! Send personalized birthday greetings to all your friends - for free and without registration!');
+    document.getElementsByTagName('head')[0].appendChild(this.meta);
   }
 
   render() {
