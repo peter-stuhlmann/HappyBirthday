@@ -21,7 +21,7 @@ export default class Home extends Component {
       <Fragment>
         <Balloons />
         <main>
-          <p className="receiver">Happy birthday, {this.state.receiver}!</p>
+          <p className="receiver">Happy birthday{this.state.receiver && ", " + this.state.receiver}!</p>
           <p className="sender">{this.state.sender}</p>
         </main>
       </Fragment>
