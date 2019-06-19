@@ -10,13 +10,13 @@ import PrivacyPolicy from './PrivacyPolicy';
 export default class App extends Component {
 
   render() {
-    return ( 
+    return (
       <Router>
 
         <Switch>
-          <Route path="/" component={ Home } />
-          <Route exact path="/impressum" component={ LegalNotice } />
-          <Route exact path="/datenschutzerklaerung" component={ PrivacyPolicy } />
+          <Route exact path="/impressum" component={LegalNotice} />
+          <Route exact path="/datenschutzerklaerung" component={PrivacyPolicy} />
+          <Route path="/" component={Home} />
           {/* <Route component={ NotFound } /> */}
         </Switch>
 
