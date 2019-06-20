@@ -9,7 +9,7 @@ export default class Home extends Component {
   }
 
   componentDidMount() {
-    document.title = `Happy birthday, ${this.state.receiver}!`
+    document.title = `Happy birthday${this.state.receiver ? ", " + this.state.receiver + "!" : "!"}`
 
     this.meta = document.createElement('meta');
     this.meta.name = 'description';
