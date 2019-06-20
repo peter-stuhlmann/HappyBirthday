@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 
 export default class NotFound extends Component {
   
@@ -8,10 +8,10 @@ export default class NotFound extends Component {
 
   render() {
     return (
-      <Fragment>
+      <main>
         <h1>Error 404</h1>
         <p>Sorry, this page does not exist (anymore).</p>
-      </Fragment>
+      </main>
     );
   }
 }

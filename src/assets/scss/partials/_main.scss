@@ -13,12 +13,21 @@ body {
         right: 0;
         left: 0;
 
+        -webkit-animation: text-animation 3s linear; /* Safari 4+ */
+  -moz-animation:    text-animation 3s linear; /* Fx 5+ */
+  -o-animation:      text-animation 3s linear; /* Opera 12+ */
+  animation:         text-animation 3s linear; /* IE 10+, Fx 29+ */
+
         .receiver {
             font-family: $secondaryFont;
             font-size: 4em;
             text-shadow: $textShadow;
             text-align: center;
-            margin-top: calc(#{$margin} * 10)
+            margin-top: calc(#{$margin} * 10);
+
+            @media (max-width: $tablet) {
+                margin-top: 10%
+            }
         }
 
         .sender {
@@ -28,3 +37,20 @@ body {
         }
     }
 }
+
+@-webkit-keyframes text-animation {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @-moz-keyframes text-animation {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @-o-keyframes text-animation {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes text-animation {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
