@@ -7,6 +7,12 @@ import LegalNotice from './LegalNotice';
 import PrivacyPolicy from './PrivacyPolicy';
 // import NotFound from './NotFound';
 
+// Google Analytics
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-62307007-21');
+ReactGA.pageview(window.location.pathname + window.location.search);
+ReactGA.set({ anonymizeIp: true });
+
 export default class App extends Component {
 
   render() {
