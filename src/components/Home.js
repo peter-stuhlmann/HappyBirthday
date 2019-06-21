@@ -1,15 +1,18 @@
 import React, { Component, Fragment } from 'react';
+import queryString from 'query-string';
 import Balloons from './Balloons';
 
 export default class Home extends Component {
   state = {
-    receiver: window.location.pathname.slice(1) || undefined,
-    sender: window.location.hash.slice(1).replace(/%20/gi, " "),
-    renderText: false
+    renderText: false,
+    queries: queryString.parse(this.props.location.search)
   }
 
   componentDidMount() {
-    document.title = `Happy birthday${this.state.receiver ? ", " + this.state.receiver + "!" : "!"}`
+
+    const { queries } = this.state;
+
+    document.title = `Happy birthday${queries.receiver ? ", " + queries.receiver + "!" : "!"}`
 
     this.meta = document.createElement('meta');
     this.meta.name = 'description';
@@ -23,12 +26,15 @@ export default class Home extends Component {
   }
 
   render() {
+
+    const { queries } = this.state;
+
     return (
       <Fragment>
         <Balloons />
         {this.state.renderText && <main>
-          <p className="receiver">Happy birthday{this.state.receiver && ", " + this.state.receiver}!</p>
-          <p className="sender">{this.state.sender}</p>
+          <p className="receiver">Happy birthday{queries.receiver && ", " + queries.receiver}!</p>
+          <p className="sender">{queries.sender}</p>
         </main>}
       </Fragment>
     );
