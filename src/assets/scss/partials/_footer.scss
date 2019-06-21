@@ -12,6 +12,8 @@ footer {
     justify-content: space-between;
     flex-flow: row wrap;
     align-items: center;
+    font-size: 0.9em;
+    color: #878787;
 
     @media (max-width: $tablet) {
         font-size: 0.75em
@@ -58,7 +60,7 @@ footer {
 
     a {
         text-decoration: none;
-        color: $secondaryColor;
+        color: #878787;
         transition: 0.3s ease all;
 
         &:hover {
