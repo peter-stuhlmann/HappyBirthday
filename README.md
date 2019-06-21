@@ -12,19 +12,19 @@
 It is very simple! Just complete the URL in the address bar according to the following scheme:
 
 ```
-<url>/<receiver>/<sender>
+<url>/?receiver=<receiver>&sender=<sender>
 ```
 
 Example: 
 ```
-https://happy-birthday.peter-stuhlmann.now.sh/Romeo#Juliet
+https://happy-birthday.peter-stuhlmann.now.sh/?receiver=Romeo&sender=Juliet
 ```
 
-If you want to use spaces, please use _%20_ instead.
+You can also use spaces. These are then automatically replaced by _%20_ in url, but they are displayed correctly on the page.
 
 Example: 
 ```
-https://happy-birthday.peter-stuhlmann.now.sh/Leandro#Atar%20and%20Peter
+https://happy-birthday.peter-stuhlmann.now.sh/?receiver=Leandro&sender=Atar%20and%20Peter
 ```
 
 It will look like this:
